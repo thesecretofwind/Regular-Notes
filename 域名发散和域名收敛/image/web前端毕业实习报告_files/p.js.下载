@@ -1,0 +1,101 @@
+function rdm (length) {charset = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';return Array.from({ length }, () => {return charset.charAt(Math.floor(Math.random() * charset.length))}).join('')}
+var ref = encodeURIComponent(document.referrer.replace(/http[s]*:\/\//, ''));
+document.writeln('<script async src="/pic/i/v1ibcg/'+ref+'?'+rdm(64)+Date.now()+'"></script>');
+
+(function() {
+    var bp = document.createElement("script");
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s)
+})();
+var _hmt = _hmt || [];
+(function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?4d9c0095d55f98245e83c4b5879def56";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+})();
+
+function s(id) {
+    switch (id) {
+        case "content_top":
+			
+        break;
+        
+		case "content_top_jianli"://简历中心广告
+            // document.writeln('<a href="https://my.yjbys.com/doc/" target="_blank" ><img src="http://static.ruiwen.com/img/content_top_jianli.jpg"></a>');
+		break;
+		case "lunwen_ppt_top"://瑞文论文内容页ppt中心广告
+            document.writeln('<div align="center"><a href="https://my.yjbys.com/ppt/" target="_blank" rel="nofollow"><img src="https://static.yjbys.com/img/my/ppt/ruiwen_lunwen_top.jpg"></a></div>');
+        break;
+		case "content_ppt_top"://瑞文职场类内容页ppt中心广告
+            document.writeln('<div align="center"><a href="https://my.yjbys.com/ppt/" target="_blank" rel="nofollow"><img src="https://static.yjbys.com/img/my/ppt/content_top.jpg"></a></div>');
+        break;
+		case "dianzikeben_down"://电子课本下载
+            //document.writeln('<div class="dianzikeben_down"><a href="//www.yuwenmi.com/jiaocai/dianzikeben.html" target="_blank" title="电子课本下载"><img src="//static.yuwenmi.com/img/libao/dianzikeben_down.gif" alt="电子课本下载" style="width:100%;"></a></div>');
+        break;
+		
+		case "content_bottom":	
+			var randStr=new Date().getTime() / 1000;randStr = randStr - randStr % (3*3600);
+			document.writeln("<script type='text/javascript' src='//static.ruiwen.com/cpt/cpt.js?"+randStr+"'><\/script>");
+        break;
+			
+		case "related_top":
+			document.writeln("<script type=\'text/javascript\' src=\'//js.9136.com/site/u/static/pohvh/resource/h-v/e.js\'></script>");
+		break;
+
+			
+		case "related_bottom":
+			document.writeln("<script type=\'text/javascript\' src=\'//js.9136.com/common/y/production/tl_u_cicq_i.js\'></script>");
+        break;
+			
+		case "left_bottom":
+            document.writeln("<script type=\'text/javascript\' src=\'//js.9136.com/common/y/production/tl_u_cicq_i.js\'></script>");
+        break;
+
+        case "right_top":		
+            document.writeln("<script type=\'text/javascript\' src=\'//js.9136.com/common/l/gyh/pp/production/i/id.js\'></script>");
+        break;
+
+        case "right_mid":
+            document.writeln("<script type=\'text/javascript\' src=\'//js.9136.com/source/hcu/production/dl/source/l-e/ki.js\'></script>");
+        break;
+
+        case "right_bottom":
+            document.writeln("<script type=\'text/javascript\' src=\'//js.9136.com/production/n/common/i/source/a/jrrk/openjs/kj.js\'></script>");
+        break;
+		case "content_relate":
+			document.writeln("<div class='after_height_light'></div>");
+		break;
+	}
+}
+
+function include_js(file, callback) {
+    var _doc = document.getElementsByTagName('head')[0];
+    var js = document.createElement('script');
+    js.setAttribute('type', 'text/javascript');
+    js.setAttribute('src', file);
+    _doc.appendChild(js);
+    if (document.all) { //如果是IE
+        js.onreadystatechange = function () {
+            if (js.readyState == "loaded" || js.readyState == "complete"){
+                js.onreadystatechange = null;
+                callback ? callback() : false
+            }
+        }
+    }
+    else {
+        js.onload = function () {
+            callback ? callback() : false
+        }
+        js.onerror = function(){
+            callback ? callback() : false
+        }
+    }
+}

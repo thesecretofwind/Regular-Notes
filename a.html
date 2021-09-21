@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* .container > p{
+            color: red;
+        } */
+        /* .container p{
+            color:blue
+        } */
+        .container~p {
+            color: orange;
+        }
+
+        /* p~ul {
+            background-color: orange;
+        } */
+        p>ul{
+            background-color: orangered;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <p>hello</p>
+        <div>
+            <p>world</p>
+        </div>
+    </div>
+
+    <p>段落P </p>
+    <div>
+        <ul>
+            <li>列表项1 </li>
+            <li>列表项2 </li>
+            <li>列表项3 </li>
+        </ul>
+    </div>
+    <ul>
+        <li>列表项1 </li>
+        <li>列表项2 </li>
+        <li>列表项3 </li>
+    </ul>
+    <ul>
+        <li>列表项1 </li>
+        <li>列表项2 </li>
+        <li>列表项3 </li>
+    </ul>
+
+</body>
+
+</html>

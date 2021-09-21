@@ -1,0 +1,20 @@
+'pubuliu';
+document.write('<div style="display:none;">'+unescape("%3Cspan id='cnzz_stat_icon_42830'%3E%3C/span%3E%3Cscript src='https://v1.cnzz.com/stat.php%3Fid%3D42830' type='text/javascript'%3E%3C/script%3E")+'</div>');
+
+$(function () {
+    var jlTerm = ['简历','求职','辞职','离职','找工作','面试'];
+    var jlShow = false;
+    for(var i = 0; i < jlTerm.length; i++){
+        if(document.title.indexOf(jlTerm[i]) > -1){
+            jlShow = true;
+            break;
+        }
+    }
+    if(jlShow){
+        var jianliHost = location.host +'/static/cpt/img/jianli_banner/';
+        var topStr = '<a href="https://my.yjbys.com/doc/" target="_blank"><img style="width:100%;" src="//'+ jianliHost +'pc1.jpg"></a>';
+        var bottomStr = '<a href="https://my.yjbys.com/doc/" target="_blank"><img style="width:100%;" src="//'+ jianliHost +'pc2.jpg"></a>';
+        $('.content').before(topStr);
+        $('.content').after(bottomStr);
+    }
+})
